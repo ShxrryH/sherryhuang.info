@@ -55,7 +55,7 @@ const float = {
   initial: { y: 16 },
   animate: {
     y: [16, -6, 16],
-    transition: { duration: 6, repeat: Infinity, ease: "easeInOut" },
+    transition: { duration: 6, repeat: Infinity, ease: "easeInOut" as const },
   },
 };
 
@@ -88,7 +88,7 @@ export default function Component() {
           }}
           initial="hidden"
           animate={controls}
-          transition={{ duration: 0.9, ease: "easeOut" }}
+          transition={{ duration: 0.9, ease: "easeOut" as const }}
           className="relative z-10 w-[52%] text-[clamp(36px,6vw,64px)] leading-[1.05]"
           style={{ color: COLORS.cobalt }}
         >
@@ -116,7 +116,7 @@ export default function Component() {
           variants={{ stage2: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: 40, rotate: 2 } }}
           initial="hidden"
           animate={controls}
-          transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
+          transition={{ duration: 0.9, ease: "easeOut" as const, delay: 0.15 }}
           className="relative z-10 w-[48%]"
         >
           <div className="flex h-[60vh] items-center justify-center rounded-2xl bg-transparent">
@@ -141,7 +141,7 @@ export default function Component() {
           variants={{ stage3: { scale: 1, opacity: 1 }, hidden: { scale: 0.9, opacity: 0 } }}
           initial="hidden"
           animate={controls}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 0.6, ease: "easeOut" as const, delay: 0.4 }}
           className="pointer-events-none absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 md:block"
         >
           <div className="h-28 w-px" style={{ background: `linear-gradient(${COLORS.cobalt}, ${COLORS.cream})` }} />
