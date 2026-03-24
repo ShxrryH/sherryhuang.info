@@ -530,52 +530,46 @@ useEffect(() => {
               transition={{ duration: 0.9, ease: "easeOut" }}
               className="relative z-10 col-span-1 flex items-center justify-center"
             >
-              <motion.img
-                src="/Wordmark blue.png"
-                alt="Sherry Huang Wordmark"
-                initial={{ opacity: 0, scale: 0.92 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                style={{
-  width: "clamp(240px, 38vw, 540px)",
-  maxWidth: "100%",
-  height: "auto",
-  userSelect: "none",
-  objectFit: "contain",
-  filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
-}}
-                style={{
-                  filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
-                }}
-              />
-            </motion.div>
+             <motion.img
+  src="/Wordmark blue.png"
+  alt="Sherry Huang Wordmark"
+  initial={{ opacity: 0, scale: 0.92 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1, ease: "easeOut" }}
+  style={{
+    width: "clamp(240px, 38vw, 540px)",
+    maxWidth: "100%",
+    height: "auto",
+    userSelect: "none",
+    objectFit: "contain",
+    filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
+  }}
+/>
+</motion.div>
 
-            <motion.div
-              variants={{ stage2: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: 40, rotate: 2 } }}
-              initial="hidden"
-              animate={controls}
-              transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-              className="relative z-10 col-span-1 flex items-center justify-center"
-            >
-              <motion.img
-                src="/logo blue.png"
-                alt="SH Monogram"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.35 }}
-                style={{
-  width: "clamp(220px, 36vw, 520px)",
-  maxWidth: "100%",
-  height: "auto",
-  userSelect: "none",
-  objectFit: "contain",
-  filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
-}}
-                style={{
-                  filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
-                }}
-              />
-            </motion.div>
+<motion.div
+  variants={{ stage2: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: 40, rotate: 2 } }}
+  initial="hidden"
+  animate={controls}
+  transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
+  className="relative z-10 col-span-1 flex items-center justify-center"
+>
+  <motion.img
+    src="/logo blue.png"
+    alt="SH Monogram"
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, delay: 0.35 }}
+    style={{
+      width: "clamp(220px, 36vw, 520px)",
+      maxWidth: "100%",
+      height: "auto",
+      userSelect: "none",
+      objectFit: "contain",
+      filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
+    }}
+  />
+</motion.div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
