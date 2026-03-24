@@ -690,14 +690,16 @@ useEffect(() => {
         />
 
         {/* Wave Divider for Parallax Transition */}
-        <div
-          style={{
-            position: "relative",
-            width: "100%",
-            height: "120",
-            zIndex: 5,
-            marginTop: "6rem",
-          }}
+<div
+  style={{
+    position: "relative",
+    width: "100%",
+    height: "120px",
+    zIndex: 5,
+    marginTop: "-1px",
+    backgroundColor: COLORS.cream,  // ← simpler, no template literal
+  }}
+>
         >
           {/* Animated shadow wave behind main wave - only top curve */}
           <motion.svg
