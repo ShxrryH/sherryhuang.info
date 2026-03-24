@@ -46,7 +46,7 @@ const projects = [
     title: "Molson Coors Conference",
     category: "Presentation Design · Event Branding · Digital Assets",
     tagline: "Built visuals for brands like Coors Banquet, Blue Moon, Simply, Topo Chico, Redds, Miller Lite",
-    thumbnail: "/mc-hero5.png",
+    thumbnail: "/Mc-hero5.png",
     description: "Designed high-volume event decks for the Molson Coors Distributor Convention at Chase Field, supporting sessions for 3,000+ attendees.",
     services: ["Brand Identity", "Packaging Design", "Visual System", "Print Design"],
     details: "More details coming soon.",
