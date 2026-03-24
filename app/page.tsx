@@ -680,7 +680,7 @@ useEffect(() => {
         <div
           style={{
             position: "absolute",
-            top: "calc(100vh - 60px)",
+            top: "calc(100vh + 220px)"
             left: "0",
             right: "0",
             bottom: "0",
@@ -696,9 +696,8 @@ useEffect(() => {
     width: "100%",
     height: "120px",
     zIndex: 5,
-    marginTop: "-60px",
-    overflow: "hidden",
-    backgroundColor: COLORS.cream,  // ← simpler, no template literal
+    marginTop: "-1px",
+    backgroundColor: "transparent",  // NOT cream here
   }}
         >
           {/* Animated shadow wave behind main wave - only top curve */}
