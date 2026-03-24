@@ -697,7 +697,7 @@ useEffect(() => {
     height: "120px",
     zIndex: 5,
     marginTop: "-1px",
-    backgroundColor: "transparent",  // NOT cream here
+backgroundColor: COLORS.cream,  // ← simpler, no template literal
   }}
         >
           {/* Animated shadow wave behind main wave - only top curve */}
