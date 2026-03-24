@@ -1112,7 +1112,6 @@ useEffect(() => {
           </div>
         </div>
         
-
         {/* Background Fill - Between About Me and Video */}
         <div
           style={{
