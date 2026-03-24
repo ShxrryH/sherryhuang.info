@@ -507,81 +507,132 @@ useEffect(() => {
         overflow: "hidden",
         background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)` 
       }}>
-        {/* Landing Page */}
-        <div
-          style={{
-            minHeight: "100vh", // Changed from height to allow extension
-            width: "100%",
-            position: "relative",
-            background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)`,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            paddingTop: "6rem",
-            paddingBottom: "10rem", // Increased from 6rem to fully cover the gap
-            maxWidth: "100vw",
-          }}
-        >
-         <motion.div
-  variants={{ stage1: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: -40, rotate: -2 } }}
-  initial="hidden"
-  animate={controls}
-  transition={{ duration: 0.9, ease: "easeOut" }}
-  style={{ position: "relative", zIndex: 10, gridColumn: "span 1", display: "flex", alignItems: "center", justifyContent: "center" }}
+       {/* Landing Page */}
+<div
+  style={{
+    minHeight: "100vh",
+    width: "100%",
+    position: "relative",
+    background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)`,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    paddingTop: "6rem",
+    paddingBottom: "10rem",
+    maxWidth: "100vw",
+  }}
 >
-  <motion.img
-    src="/Wordmark blue.png"
-    alt="Sherry Huang Wordmark"
-    initial={{ opacity: 0, scale: 0.92 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 1, ease: "easeOut" }}
-    style={{
-      width: "clamp(240px, 38vw, 540px)",
-      maxWidth: "100%",
-      height: "auto",
-      userSelect: "none",
-      objectFit: "contain",
-      filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
-    }}
-  />
-</motion.div>
+  <div style={{ display: "grid", height: "100%", width: "100%", gridTemplateColumns: "1fr 1fr", placeItems: "center", padding: "0 2rem" }}>
 
-<motion.div
-  variants={{ stage2: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: 40, rotate: 2 } }}
-  initial="hidden"
-  animate={controls}
-  transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-  style={{ position: "relative", zIndex: 10, gridColumn: "span 1", display: "flex", alignItems: "center", justifyContent: "center" }}
->
-  <motion.img
-    src="/logo blue.png"
-    alt="SH Monogram"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.8, delay: 0.35 }}
-    style={{
-      width: "clamp(220px, 36vw, 520px)",
-      maxWidth: "100%",
-      height: "auto",
-      userSelect: "none",
-      objectFit: "contain",
-      filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
-    }}
-  />
-</motion.div>
+    <motion.div
+      variants={{ stage1: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: -40, rotate: -2 } }}
+      initial="hidden"
+      animate={controls}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+      style={{ position: "relative", zIndex: 10, gridColumn: "span 1", display: "flex", alignItems: "center", justifyContent: "center" }}
+    >
+      <motion.img
+        src="/Wordmark blue.png"
+        alt="Sherry Huang Wordmark"
+        initial={{ opacity: 0, scale: 0.92 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        style={{
+          width: "clamp(240px, 38vw, 540px)",
+          maxWidth: "100%",
+          height: "auto",
+          userSelect: "none",
+          objectFit: "contain",
+          filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
+        }}
+      />
+    </motion.div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
-              className="pointer-events-none absolute left-1/2 top-0 hidden h-full -translate-x-1/2 md:block"
-            >
-              <div
-                className="w-px h-full"
-                style={{ background: `linear-gradient(${COLORS.cobalt}, ${COLORS.cream})` }}
-              />
-            </motion.div>
-          </div>
+    <motion.div
+      variants={{ stage2: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: 40, rotate: 2 } }}
+      initial="hidden"
+      animate={controls}
+      transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
+      style={{ position: "relative", zIndex: 10, gridColumn: "span 1", display: "flex", alignItems: "center", justifyContent: "center" }}
+    >
+      <motion.img
+        src="/logo blue.png"
+        alt="SH Monogram"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.35 }}
+        style={{
+          width: "clamp(220px, 36vw, 520px)",
+          maxWidth: "100%",
+          height: "auto",
+          userSelect: "none",
+          objectFit: "contain",
+          filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
+        }}
+      />
+    </motion.div>
+
+    <motion.div
+      initial={{ opacity: 0, scale: 0.98 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+      style={{
+        pointerEvents: "none",
+        position: "absolute",
+        left: "50%",
+        top: 0,
+        height: "100%",
+        transform: "translateX(-50%)",
+        display: "block",
+      }}
+    >
+      <div style={{ width: "1px", height: "100%", background: `linear-gradient(${COLORS.cobalt}, ${COLORS.cream})` }} />
+    </motion.div>
+
+  </div>
+
+  {/* Scroll Arrow */}
+  <motion.a
+    href="#work"
+    animate={{ opacity: scrollArrowVisible ? 1 : 0 }}
+    transition={{ duration: 0.4 }}
+    style={{
+      position: "fixed",
+      bottom: "2rem",
+      right: "2rem",
+      zIndex: 20,
+      cursor: "pointer",
+      textDecoration: "none",
+      pointerEvents: scrollArrowVisible ? "auto" : "none",
+    }}
+  >
+    <motion.div
+      animate={{ y: [0, 12, 0] }}
+      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        width: "56px",
+        height: "56px",
+        borderRadius: "50%",
+        backgroundColor: COLORS.cobalt,
+        boxShadow: "0 4px 16px rgba(46, 52, 147, 0.3)",
+      }}
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M12 5V19M12 19L19 12M12 19L5 12"
+          stroke={COLORS.cream}
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </motion.div>
+  </motion.a>
+
+</div>
 
           {/* Scroll Arrow */}
           <motion.a
