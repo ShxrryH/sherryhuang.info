@@ -536,7 +536,14 @@ useEffect(() => {
                 initial={{ opacity: 0, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="w-[clamp(240px,38vw,540px)] max-w-full h-auto select-none object-contain"
+                style={{
+  width: "clamp(240px, 38vw, 540px)",
+  maxWidth: "100%",
+  height: "auto",
+  userSelect: "none",
+  objectFit: "contain",
+  filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
+}}
                 style={{
                   filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
                 }}
@@ -556,7 +563,14 @@ useEffect(() => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.35 }}
-                className="w-[clamp(220px,36vw,520px)] max-w-full h-auto select-none object-contain"
+                style={{
+  width: "clamp(220px, 36vw, 520px)",
+  maxWidth: "100%",
+  height: "auto",
+  userSelect: "none",
+  objectFit: "contain",
+  filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
+}}
                 style={{
                   filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
                 }}
