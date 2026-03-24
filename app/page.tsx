@@ -510,7 +510,7 @@ useEffect(() => {
   {/* Landing Page */}
 <div
   style={{
-    minHeight: "100vh",
+    minHeight: "110vh",
     width: "100%",
     position: "relative",
     background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)`,
