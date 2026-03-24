@@ -536,7 +536,7 @@ useEffect(() => {
                 initial={{ opacity: 0, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="w-[clamp(240px,38vw,540px)] max-w-full h-auto select-none object-contain"
+                className="w-[clamp(120px,18vw,240px)] max-w-full h-auto select-none object-contain"
                 style={{
                   filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
                 }}
