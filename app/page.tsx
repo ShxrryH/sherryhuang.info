@@ -696,7 +696,8 @@ useEffect(() => {
     width: "100%",
     height: "120px",
     zIndex: 5,
-    marginTop: "-1px",
+    marginTop: "-60px",
+    overflow: "hidden",
     backgroundColor: COLORS.cream,  // ← simpler, no template literal
   }}
         >
