@@ -522,29 +522,28 @@ useEffect(() => {
             maxWidth: "100vw",
           }}
         >
-          <div className="grid h-full w-full grid-cols-2 place-items-center px-4 md:px-8">
-            <motion.div
-              variants={{ stage1: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: -40, rotate: -2 } }}
-              initial="hidden"
-              animate={controls}
-              transition={{ duration: 0.9, ease: "easeOut" }}
-              className="relative z-10 col-span-1 flex items-center justify-center"
-            >
-             <motion.img
-  src="/Wordmark blue.png"
-  alt="Sherry Huang Wordmark"
-  initial={{ opacity: 0, scale: 0.92 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1, ease: "easeOut" }}
-  style={{
-    width: "clamp(240px, 38vw, 540px)",
-    maxWidth: "100%",
-    height: "auto",
-    userSelect: "none",
-    objectFit: "contain",
-    filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
-  }}
-/>
+         <motion.div
+  variants={{ stage1: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: -40, rotate: -2 } }}
+  initial="hidden"
+  animate={controls}
+  transition={{ duration: 0.9, ease: "easeOut" }}
+  style={{ position: "relative", zIndex: 10, gridColumn: "span 1", display: "flex", alignItems: "center", justifyContent: "center" }}
+>
+  <motion.img
+    src="/Wordmark blue.png"
+    alt="Sherry Huang Wordmark"
+    initial={{ opacity: 0, scale: 0.92 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 1, ease: "easeOut" }}
+    style={{
+      width: "clamp(240px, 38vw, 540px)",
+      maxWidth: "100%",
+      height: "auto",
+      userSelect: "none",
+      objectFit: "contain",
+      filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
+    }}
+  />
 </motion.div>
 
 <motion.div
@@ -552,7 +551,7 @@ useEffect(() => {
   initial="hidden"
   animate={controls}
   transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-  className="relative z-10 col-span-1 flex items-center justify-center"
+  style={{ position: "relative", zIndex: 10, gridColumn: "span 1", display: "flex", alignItems: "center", justifyContent: "center" }}
 >
   <motion.img
     src="/logo blue.png"
