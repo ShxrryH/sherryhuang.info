@@ -694,10 +694,9 @@ useEffect(() => {
           style={{
             position: "relative",
             width: "100%",
-            height: "0",
-            overflow: "visible",
+            height: "120",
             zIndex: 5,
-            marginTop: "6rem",
+            marginTop: "-1px",
           }}
         >
           {/* Animated shadow wave behind main wave - only top curve */}
