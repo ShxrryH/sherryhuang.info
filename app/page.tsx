@@ -507,7 +507,7 @@ useEffect(() => {
         overflow: "hidden",
         background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)` 
       }}>
- {/* Landing Page */}
+  {/* Landing Page */}
 <div
   style={{
     minHeight: "100vh",
@@ -518,7 +518,7 @@ useEffect(() => {
     flexDirection: "column",
     justifyContent: "center",
     paddingTop: "6rem",
-    paddingBottom: "120px",
+    paddingBottom: "10rem",
     maxWidth: "100vw",
   }}
 >
@@ -632,139 +632,190 @@ useEffect(() => {
     </motion.div>
   </motion.a>
 
-  {/* Wave Divider - inside landing, pinned to bottom */}
-  <div
-    style={{
-      position: "absolute",
-      bottom: "0",
-      left: "0",
-      width: "100%",
-      height: "120px",
-      zIndex: 5,
-    }}
-  >
-    {/* Animated shadow wave */}
-    <motion.svg
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      style={{
-        position: "absolute",
-        bottom: "-5px",
-        left: "0",
-        width: "100%",
-        height: "120px",
-        zIndex: 1,
-        filter: "blur(12px)",
-      }}
-      viewBox="0 0 1440 120"
-      preserveAspectRatio="none"
-    >
-      <motion.path
-        animate={{
-          d: [
-            "M0,50 Q360,20 720,50 T1440,50",
-            "M0,50 Q360,80 720,50 T1440,50",
-            "M0,50 Q360,20 720,50 T1440,50",
-          ]
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        d="M0,50 Q360,20 720,50 T1440,50"
-        stroke="rgba(46, 52, 147, 0.4)"
-        strokeWidth="30"
-        fill="none"
-      />
-    </motion.svg>
-
-    {/* Main wave */}
-    <motion.svg
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1, ease: "easeOut" }}
-      style={{
-        position: "absolute",
-        bottom: "0",
-        left: "0",
-        width: "100%",
-        height: "120px",
-        zIndex: 2,
-      }}
-      viewBox="0 0 1440 120"
-      preserveAspectRatio="none"
-    >
-      <motion.path
-        animate={{
-          d: [
-            "M0,50 Q360,20 720,50 T1440,50 L1440,120 L0,120 Z",
-            "M0,50 Q360,80 720,50 T1440,50 L1440,120 L0,120 Z",
-            "M0,50 Q360,20 720,50 T1440,50 L1440,120 L0,120 Z",
-          ]
-        }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        d="M0,50 Q360,20 720,50 T1440,50 L1440,120 L0,120 Z"
-        fill="#FBF7F0"
-      />
-    </motion.svg>
-  </div>
-
 </div>
 
-{/* About Me Section */}
+          {/* Scroll Arrow */}
+          <motion.a
+            href="#work"
+            animate={{ opacity: scrollArrowVisible ? 1 : 0 }}
+            transition={{ duration: 0.4 }}
+            style={{
+              position: "fixed",
+              bottom: "2rem",
+              right: "2rem",
+              zIndex: 20,
+              cursor: "pointer",
+              textDecoration: "none",
+              pointerEvents: scrollArrowVisible ? "auto" : "none",
+            }}
+          >
+            <motion.div
+              animate={{ y: [0, 12, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                width: "56px",
+                height: "56px",
+                borderRadius: "50%",
+                backgroundColor: COLORS.cobalt,
+                boxShadow: "0 4px 16px rgba(46, 52, 147, 0.3)",
+              }}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5V19M12 19L19 12M12 19L5 12"
+                  stroke={COLORS.cream}
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </motion.div>
+          </motion.a>
+        </div>
+
+        {/* Wave Divider for Parallax Transition */}
 <div
   style={{
-    width: "100%",
-    backgroundColor: "#FBF7F0",
-    padding: "5rem 2rem 7rem 2rem",
     position: "relative",
-    zIndex: 1,
+    width: "100%",
+    height: "120px",
+    zIndex: 5,
+    marginTop: "-1px",
   }}
->
-  <div
-    style={{
-      maxWidth: "1200px",
-      margin: "0 auto",
-    }}
-  >
-    {/* About Me Header */}
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        gap: "1rem",
-        marginBottom: "3rem",
-      }}
-    >
-      <h2
-        style={{
-          fontSize: "clamp(2.5rem, 5vw, 4rem)",
-          fontWeight: "700",
-          color: COLORS.cobalt,
-          fontFamily: "'Inter', sans-serif",
-          margin: 0,
-        }}
-      >
-        About Me
-      </h2>
-      <motion.svg
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        width="48"
-        height="48"
-        viewBox="0 0 24 24"
-        fill="none"
-        style={{ flexShrink: 0 }}
-      >
-        <path
-          d="M12 2L14.09 8.26L20 10L14.09 11.74L12 18L9.91 11.74L4 10L9.91 8.26L12 2Z"
-          fill={COLORS.cobalt}
-        />
-      </motion.svg>
-    </motion.div>
-    
+        >
+          {/* Animated shadow wave behind main wave - only top curve */}
+          <motion.svg
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            style={{
+              position: "absolute",
+              bottom: "-5px",
+              left: "0",
+              width: "100%",
+              height: "120px",
+              transform: "translateY(0)",
+              zIndex: 1,
+              filter: "blur(12px)",
+            }}
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <motion.path
+              animate={{
+                d: [
+                  "M0,50 Q360,20 720,50 T1440,50",
+                  "M0,50 Q360,80 720,50 T1440,50",
+                  "M0,50 Q360,20 720,50 T1440,50",
+                ]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              d="M0,50 Q360,20 720,50 T1440,50"
+              stroke="rgba(46, 52, 147, 0.4)"
+              strokeWidth="30"
+              fill="none"
+            />
+          </motion.svg>
+
+          {/* Main wave */}
+          <motion.svg
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            style={{
+              position: "absolute",
+              bottom: "0",
+              left: "0",
+              width: "100%",
+              height: "120px",
+              transform: "translateY(0)",
+              zIndex: 2,
+            }}
+            viewBox="0 0 1440 120"
+            preserveAspectRatio="none"
+          >
+            <motion.path
+              animate={{
+                d: [
+                  "M0,50 Q360,20 720,50 T1440,50 L1440,120 L0,120 Z",
+                  "M0,50 Q360,80 720,50 T1440,50 L1440,120 L0,120 Z",
+                  "M0,50 Q360,20 720,50 T1440,50 L1440,120 L0,120 Z",
+                ]
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              d="M0,50 Q360,20 720,50 T1440,50 L1440,120 L0,120 Z"
+              fill="#FBF7F0"
+            />
+          </motion.svg>
+        </div>
+
+        {/* About Me Section */}
+        <div
+          style={{
+            width: "100%",
+            backgroundColor: "#FBF7F0",
+            padding: "5rem 2rem 7rem 2rem",
+            position: "relative",
+            zIndex: 1,
+          }}
+        >
+          <div
+            style={{
+              maxWidth: "1200px",
+              margin: "0 auto",
+            }}
+          >
+            {/* About Me Header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "1rem",
+                marginBottom: "3rem",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: "clamp(2.5rem, 5vw, 4rem)",
+                  fontWeight: "700",
+                  color: COLORS.cobalt,
+                  fontFamily: "'Inter', sans-serif",
+                  margin: 0,
+                }}
+              >
+                About Me
+              </h2>
+              <motion.svg
+                animate={{ rotate: [0, 360] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                width="48"
+                height="48"
+                viewBox="0 0 24 24"
+                fill="none"
+                style={{ flexShrink: 0 }}
+              >
+                <path
+                  d="M12 2L14.09 8.26L20 10L14.09 11.74L12 18L9.91 11.74L4 10L9.91 8.26L12 2Z"
+                  fill={COLORS.cobalt}
+                />
+              </motion.svg>
+            </motion.div>
+            
             {/* Main Content Grid */}
             <div
               style={{
