@@ -699,7 +699,6 @@ useEffect(() => {
     marginTop: "-1px",
     backgroundColor: COLORS.cream,  // ← simpler, no template literal
   }}
->
         >
           {/* Animated shadow wave behind main wave - only top curve */}
           <motion.svg
