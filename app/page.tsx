@@ -507,10 +507,10 @@ useEffect(() => {
         overflow: "hidden",
         background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)` 
       }}>
-        {/* Landing Page */}
+       {/* Landing Page */}
         <div
           style={{
-            minHeight: "100vh", // Changed from height to allow extension
+            minHeight: "100vh",
             width: "100%",
             position: "relative",
             background: `linear-gradient(90deg, ${COLORS.cream} 50%, ${COLORS.cobalt} 50%)`,
@@ -518,7 +518,7 @@ useEffect(() => {
             flexDirection: "column",
             justifyContent: "center",
             paddingTop: "6rem",
-            paddingBottom: "10rem", // Increased from 6rem to fully cover the gap
+            paddingBottom: "10rem",
             maxWidth: "100vw",
           }}
         >
@@ -528,7 +528,7 @@ useEffect(() => {
               initial="hidden"
               animate={controls}
               transition={{ duration: 0.9, ease: "easeOut" }}
-              className="relative z-10 col-span-1 flex items-center justify-center"
+              className="relative z-10 col-span-1 flex items-center justify-center max-w-[300px] w-full mx-auto"
             >
               <motion.img
                 src="/Wordmark blue.png"
@@ -536,19 +536,18 @@ useEffect(() => {
                 initial={{ opacity: 0, scale: 0.92 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, ease: "easeOut" }}
-                className="w-[clamp(120px,18vw,240px)] max-w-full h-auto select-none object-contain"
+                className="w-full max-w-[220px] h-auto select-none object-contain"
                 style={{
                   filter: `brightness(0) saturate(100%) invert(19%) sepia(79%) saturate(2067%) hue-rotate(227deg) brightness(93%) contrast(92%)`,
                 }}
               />
             </motion.div>
-
             <motion.div
               variants={{ stage2: { opacity: 1, x: 0, rotate: 0 }, hidden: { opacity: 0, x: 40, rotate: 2 } }}
               initial="hidden"
               animate={controls}
               transition={{ duration: 0.9, ease: "easeOut", delay: 0.15 }}
-              className="relative z-10 col-span-1 flex items-center justify-center"
+              className="relative z-10 col-span-1 flex items-center justify-center max-w-[300px] w-full mx-auto"
             >
               <motion.img
                 src="/logo blue.png"
@@ -556,12 +555,7 @@ useEffect(() => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.35 }}
-                className="w-[clamp(100px,16vw,220px)] max-w-full h-auto select-none object-contain"
-                style={{
-                  filter: `brightness(0) saturate(100%) invert(93%) sepia(12%) saturate(150%) hue-rotate(10deg) brightness(102%) contrast(98%)`,
-                }}
-              />
-            </motion.div>
+                className="w-full max-w-[20
 
             <motion.div
               initial={{ opacity: 0, scale: 0.98 }}
