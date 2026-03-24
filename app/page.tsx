@@ -680,7 +680,7 @@ useEffect(() => {
         <div
           style={{
             position: "absolute",
-            top: "calc(100vh + 220px)",
+            top: "calc(100vh - 60px)",
             left: "0",
             right: "0",
             bottom: "0",
