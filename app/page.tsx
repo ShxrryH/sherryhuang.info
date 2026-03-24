@@ -683,7 +683,7 @@ useEffect(() => {
     width: "100%",
     height: "120px",
     zIndex: 5,
-    marginTop: "-55px",
+    marginTop: "-60px",
     backgroundColor: "transparent",
   }}
         >
