@@ -1639,7 +1639,6 @@ useEffect(() => {
             </div>
           </div>
         </div>
-      </div>
 
       {/* Footer */}
       <footer
