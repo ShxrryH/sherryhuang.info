@@ -676,19 +676,6 @@ useEffect(() => {
           </motion.a>
         </div>
 
-        {/* Solid Background Overlay - Covers parent gradient for all sections after landing */}
-        <div
-          style={{
-            position: "absolute",
-            top: "calc(100vh + 220px)"
-            left: "0",
-            right: "0",
-            bottom: "0",
-            backgroundColor: "#FBF7F0",
-            zIndex: 0,
-          }}
-        />
-
         {/* Wave Divider for Parallax Transition */}
 <div
   style={{
@@ -697,7 +684,6 @@ useEffect(() => {
     height: "120px",
     zIndex: 5,
     marginTop: "-1px",
-backgroundColor: COLORS.cream,  // ← simpler, no template literal
   }}
         >
           {/* Animated shadow wave behind main wave - only top curve */}
